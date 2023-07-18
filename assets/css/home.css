@@ -1,0 +1,86 @@
+/***************************
+          HEADER
+****************************/
+header{
+    align-items:center;
+    position:relative;
+    width:100%;
+    background-color:var(--secondary);
+    color:var(--white);
+    overflow:hidden !important;
+}
+
+header:after{
+    content:"";
+    width:3840px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:100px;
+    z-index:11;
+    background:url("../../assets/images/wave-top.png") repeat-x;
+    -webkit-animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+header:before{
+    content:"";
+    width:3840px;
+    position:absolute;
+    bottom:0.5rem;
+    left:0;
+    height:100px;
+    z-index:1;
+    opacity:0.5;
+    background:url("../../assets/images/wave-top.png") repeat-x;
+    -webkit-animation: wave 25s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    animation: wave 25s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+header section{
+    position:relative;
+    z-index:111;
+}
+
+header p{
+    font-weight:200;
+    font-size:1.1em;
+}
+
+header .buttons{
+    align-items:center;
+}
+
+header .buttons .btn:not(:last-child){
+    margin-right:15px;
+}
+
+@media (max-width:920px){
+    header{
+        text-align:center;
+        padding:4rem 0 !important;
+    }
+    
+    header aside{
+        justify-content:center;
+    }
+    
+    header figure{
+        margin:auto;
+    }
+}
+
+
+@media (max-width:520px){
+    header aside{
+        flex-wrap:wrap;
+    }
+    
+    header aside .btn{
+        display:block;
+        width:100%;
+        margin:0.5rem 0 !important;
+    }
+}
